@@ -35,6 +35,6 @@ urlpatterns = [
 
     # pach ('CArbonara = URL de la Pagina en la barra del navegador /,
     #   views.carbonara (hace referncia a la funcion vista)
-    #   name= carbonara hace referencia al Home HTML<a href="{% url 'carbonara' %}"> carbonara</a>
+    #   name= carbonara es el nombre para usarlo dentro de HTML="{% url 'carbonara' %}"> carbonara</a>
 ]    #
 
