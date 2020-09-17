@@ -23,4 +23,5 @@ from plantilla_5 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('insertar/', views.insert),
+    path('consultar/', views.insert),
 ]
