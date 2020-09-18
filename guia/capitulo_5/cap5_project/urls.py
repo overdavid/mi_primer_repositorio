@@ -25,4 +25,5 @@ urlpatterns = [
     path('insertar/', views.insert),
     path('consultar/', views.select),
     path('delete/', views.delete),
+
 ]

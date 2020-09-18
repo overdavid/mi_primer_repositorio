@@ -42,11 +42,13 @@ def delete(request):
                             user="capitulo_4_user",
                             password="patata")
     cursor = conn.cursor()
-    cursor.execute("delete from emp")
+    cursor.execute("delete from emp;")
     conn.commit()
     cursor.close()
     conn.close()
-    return HttpResponse("Borrado")
+    return HttpResponse("borrado")
+
+
 
 
 
