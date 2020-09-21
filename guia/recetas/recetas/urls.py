@@ -33,8 +33,8 @@ urlpatterns = [
     path('ensaladilla_rusa/', views.ensaladilla_rusa, name='ensaladilla_rusa'),
     path('carbonara/', views.carbonara, name='carbonara')
 
-    # pach ('CArbonara = URL de la Pagina en la barra del navegador /,
-    #   views.carbonara (hace referncia a la funcion vista)
+    # pach ('Carbonara = URL de la Pagina en la barra del navegador /,
+    #   views.carbonara (hace referencia a la funcion vista)
     #   name= carbonara es el nombre para usarlo dentro de HTML="{% url 'carbonara' %}"> carbonara</a>
 ]    #
 

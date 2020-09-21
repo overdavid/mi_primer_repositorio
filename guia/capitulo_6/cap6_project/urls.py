@@ -23,4 +23,5 @@ urlpatterns = [
     path('anadir/',views.insert),
 
 
+
 ]
