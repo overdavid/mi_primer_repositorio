@@ -1,11 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import psycopg2
 
 def formulario(request):
-    return render(request, 'home6.html')
+    conn = psycopg2.connect(dbname="capitulo_6_db",
+                            user="capitulo_6_user",
+                            password="patata")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM Nota;")
+    result = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    params = {'notas': 'funciona'}
+    return render(request, 'home6.html', params)
 
 def insert(request):
+    print('hola')
     conn = psycopg2.connect(dbname="capitulo_6_db",
                             user="capitulo_6_user",
                             password="patata")
@@ -20,10 +31,7 @@ def insert(request):
     cursor.close()
     conn.close()
 
-    return HttpResponse(f'Insertado <br> '
-                        f'prioridad: {prioridad}<br>'
-                        f'titulo: {titulo}<br>'
-                        f'nota: {nota}<br>')
+    return redirect('notas')
 
 
 
