@@ -9,7 +9,7 @@ def formulario(request):
     cursor = conn.cursor()
 
     cursor.execute("SELECT * FROM Nota;")
-    result = cursor.fetchone()
+    result = cursor.fetchall()
     cursor.close()
     conn.close()
     params = {'notas': 'funciona'}
@@ -26,7 +26,7 @@ def insert(request):
     nota = request.POST["name_nota"]
 
     cursor = conn.cursor()
-    cursor.execute(f"INSERT INTO nota VALUES ('{prioridad}','{titulo}','{nota}');")
+    cursor.execute(f"INSERT INTO nota VALUES ('{prioridad}','{titulo}','{notas}');")
     conn.commit()
     cursor.close()
     conn.close()
