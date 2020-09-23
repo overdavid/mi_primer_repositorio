@@ -5,7 +5,12 @@
     </head>
     <body>
     <h1>Notas</h1>
-    {{ notas}}
+    {% for nota in notas %}
+   <fieldset>
+       <legend>{{ nota.prioridad }} - {{ nota.titulo }}</legend>
+       {{ nota.contenido }} <br>
+   </fieldset>
+{% endfor %}
     <form method="POST" action="/anadir/">
 
         <label for="id_prioridad">Prioridad:</label>
