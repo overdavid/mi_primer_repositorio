@@ -1,5 +1,4 @@
 """cap5_project URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
@@ -15,15 +14,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from django.contrib import admin
-from django.urls import path
 from plantilla_5 import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('insertar/', views.insert),
     path('consultar/', views.select),
-    path('delete/', views.delete),
-
+    path('borrar/', views.delete),
 ]
